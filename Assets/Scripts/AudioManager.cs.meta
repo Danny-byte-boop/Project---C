@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fab25b7bd7bbcaa45a1a12132edc7686
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - mainMenuMusic: {fileID: 8300000, guid: a8d34148dae3c634a98775328ea48c61, type: 3}
+  - mainStoryMainMenuMusic: {instanceID: 0}
+  - endCreditsMenuMusic: {instanceID: 0}
+  - gameMusic: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
