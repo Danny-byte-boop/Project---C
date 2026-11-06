@@ -2,7 +2,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
-    private static AudioManager instance;
+    public static AudioManager instance;
+
     private AudioSource audioSource;
 
     // Assign these in the Inspector
@@ -22,11 +23,14 @@ public class AudioManager : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(gameObject);
+
         audioSource = GetComponent<AudioSource>();
         audioSource.loop = true;
 
-        // Subscribe to scene change events
         SceneManager.sceneLoaded += OnSceneLoaded;
+
+        // Play music for the starting scene
+        OnSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -36,18 +40,23 @@ public class AudioManager : MonoBehaviour
             case "Main Menu Scene":
                 ChangeClip(mainMenuMusic);
                 break;
+
             case "Guide Scene":
                 ChangeClip(guideMenuMusic);
                 break;
+
             case "Main Story Scene":
                 ChangeClip(mainStoryMusic);
                 break;
+
             case "Chapter 1, Finding the Calm in the Storm":
                 ChangeClip(chapter1Music);
                 break;
+
             case "End Credits":
                 ChangeClip(endCreditsMenuMusic);
                 break;
+
             default:
                 ChangeClip(mainMenuMusic);
                 break;
@@ -56,7 +65,7 @@ public class AudioManager : MonoBehaviour
 
     void ChangeClip(AudioClip clip)
     {
-        if (audioSource.clip != clip)
+        if (clip != null && audioSource.clip != clip)
         {
             audioSource.clip = clip;
             audioSource.Play();
@@ -65,6 +74,11 @@ public class AudioManager : MonoBehaviour
 
     void OnDestroy()
     {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
+        if (instance == this)
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+            instance = null;
+        }
     }
 }
+
