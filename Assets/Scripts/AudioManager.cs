@@ -1,12 +1,17 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+/// <summary>
+/// This AudioManager script allows for main menu music to be played, along with the game music, and the end credits music.
+/// It allows for seamless transitions between the different songs as you navigate through the game and different menus
+/// </summary>
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
-
+    //Instantiates a private AudioSource and assigns it the variable, audioSource
     private AudioSource audioSource;
 
-    // Assign these in the Inspector
+    // You would assign each different track in the Inspector for this script, so main menu music, guide menu music,
+    //end credits menu music, chapter1Music, and mainStoryMusic
     public AudioClip mainMenuMusic;
     public AudioClip guideMenuMusic;
     public AudioClip endCreditsMenuMusic;
@@ -29,10 +34,10 @@ public class AudioManager : MonoBehaviour
 
         SceneManager.sceneLoaded += OnSceneLoaded;
 
-        // Play music for the starting scene
+        // Plays music for the starting scene
         OnSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
     }
-
+    //Switches the music based on what scene the player is in. So a case by case basis for all the different menus in STRANDED TOGETHER
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         switch (scene.name)
@@ -62,7 +67,8 @@ public class AudioManager : MonoBehaviour
                 break;
         }
     }
-
+    //This simply changes the audioClip depending on the scene the player is in. Some music is the same, and there are really
+    //only a three different songs played throughout STRANDED TOGETHER.
     void ChangeClip(AudioClip clip)
     {
         if (clip != null && audioSource.clip != clip)
@@ -71,7 +77,8 @@ public class AudioManager : MonoBehaviour
             audioSource.Play();
         }
     }
-
+    //OnDestroy() makes it so the audioClip gets "destroyed" or stops playing entirely so that the new one can play.
+    //This ensures seamless transitions between the different scenes in STRANDED TOGETHER.
     void OnDestroy()
     {
         if (instance == this)

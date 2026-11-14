@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 2904317}
   - component: {fileID: 2904316}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: StrandedTogetherText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10.433014, y: 149}
+  m_AnchoredPosition: {x: 10.433014, y: 144}
   m_SizeDelta: {x: -769.1339, y: -391.3937}
   m_Pivot: {x: 0.5, y: 0.49999994}
 --- !u!114 &2904316
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 21
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 325598137}
   - component: {fileID: 325598136}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: EndCreditsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -435,8 +435,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 240, y: -6}
-  m_SizeDelta: {x: 185.0757, y: 52.8953}
+  m_AnchoredPosition: {x: 306, y: -6.0001}
+  m_SizeDelta: {x: 185.0757, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &325598136
 MonoBehaviour:
@@ -459,7 +459,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.83396226, g: 0, b: 0.777171, a: 1}
+    m_NormalColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -792,7 +792,7 @@ GameObject:
   - component: {fileID: 578708754}
   - component: {fileID: 578708753}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ReadyButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1015,7 +1015,7 @@ GameObject:
   - component: {fileID: 891922015}
   - component: {fileID: 891922014}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: GuideButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1303,7 +1303,7 @@ GameObject:
   - component: {fileID: 1130002377}
   - component: {fileID: 1130002376}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: EndCreditsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1546,7 +1546,7 @@ GameObject:
   - component: {fileID: 1500731508}
   - component: {fileID: 1500731507}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ReadyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1593,7 +1593,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.85660374, g: 0.08242789, b: 0.7548459, a: 1}
+    m_NormalColor: {r: 0.9992268, g: 1, b: 0, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1678,7 +1678,7 @@ GameObject:
   - component: {fileID: 1733203083}
   - component: {fileID: 1733203082}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: GuideButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1817,7 +1817,7 @@ GameObject:
   - component: {fileID: 2000300529}
   - component: {fileID: 2000300528}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: MainStory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1864,7 +1864,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.4113207, g: 0.4027055, b: 0.2661943, a: 1}
+    m_NormalColor: {r: 0.96862745, g: 0.03529414, b: 0.7993552, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1949,7 +1949,7 @@ GameObject:
   - component: {fileID: 2016354543}
   - component: {fileID: 2016354542}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: MainStoryText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
